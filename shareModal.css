@@ -1,0 +1,217 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    color: aliceblue;
+    background-color: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.circle-1 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    border: 5px;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 1.3rem blueviolet);
+    top: 100px;
+    left: 520px;
+    animation: circle1 4s ease-in-out infinite; /* Ensure the animation name and values are correct */
+}
+
+@keyframes circle1 {
+    0% {
+        transform: translateX(0px); /* Start 20px to the left */
+    }
+    50%{
+        transform: translateY(-20px);
+
+    }
+    100% {
+        transform: translateX(0px); /* Move to the original position */
+    }
+}
+
+
+.circle-2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(203, 221, 37);
+    border: 5px;
+    border-radius: 50%;
+    /* display: none; */
+    filter: drop-shadow(0 0 0.75rem rgb(203, 221, 37));
+    bottom: 63px;
+    left: 730px;
+    animation: circle2 4s ease-in-out infinite;
+}
+
+@keyframes circle2 {
+    0% {
+        transform: translateX(0px); /* Start 20px to the left */
+    }
+    50%{
+        transform:translateX(-20px);
+
+    }
+    100% {
+        transform: translateX(0px); /* Move to the original position */
+    }
+}
+
+
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid white;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.123);
+    /* -webkit-backdrop-filter: blur(1px); */
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    /* display: none; */
+}
+
+.user-name,
+.designation {
+    font-family: Arial, sans-serif;
+    
+}
+
+.user-name{
+    color: white;
+}
+
+.designation{
+    color: #96a0a7;
+}
+
+.image img {
+    height: 100px;
+    border-radius: 50%;
+}
+
+.button-group{
+    font-family: Arial, sans-serif;
+    display: flex;
+    gap: 10px;
+
+}
+.button-group button {
+    border: white solid 1px;
+    color: rgb(177, 177, 177);
+    padding: 8px;
+    border-radius: 5px;
+    background-color: black;
+    cursor: pointer;
+}
+
+/* every icon  */
+i{
+    cursor: pointer;
+}
+
+.modal{
+    position: absolute;
+    border: white 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 150px;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.123);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 10px;
+    scale: 0;
+    transition: all 0.5s ease-in-out;
+    font-family: Arial, sans-serif;
+
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom: 1px solid white;
+    padding-bottom:10px;
+    font-family: Arial, sans-serif;
+
+}
+
+.via{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.profile-share{
+    display: flex;
+    gap: 5px;
+}
+
+.icon-container{
+    display: flex;
+    gap: 40px;
+    padding-top: 20px;
+}
+
+a{
+    font-size: x-large;
+}
+
+#facebook{
+    color: #1877F2;
+}
+
+#twitter{
+    color: #1DA1F2;
+}
+
+#whatsapp{
+    color: #25D366;
+}
+
+#instagram{
+    color: #E4405F;
+}
+#telegram{
+    color: #0088CC;
+}
+
+.overlay{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    display: none;
+    z-index: 95;
+    transition: all 1s ease-in-out;
+    scale: 0;
+}
